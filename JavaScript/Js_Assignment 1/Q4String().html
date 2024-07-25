@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title> Js Function</title>
+        <script>
+            function PerformOperations(){
+                var str = document.getElementById("n").value;
+                var op = document.getElementById("op").value;
+                var result = "";
+                if(op == "length"){
+                    result = "<b>String length: " + str.length + "</b>";
+                }else if(op == "charAt"){
+                    result = "<b>Character at index 0: " + str.charAt(0) + "</b>";
+                }else if(op == "slice"){
+                    result = "<b>Sliced string: " + str.slice(1, 8) + "</b>";
+                }else if(op == "substring"){
+                    result = "<b>Substring: " + str.substring(1) + "</b>";
+                }else if(op == "substr"){
+                    result = "<b>Substring: " + str.substr(1, 2) + "</b>";
+                }else if(op == "uppercase"){
+                    result = "<b>Uppercase: " + str.toUpperCase() + "</b>";
+                }else if(op == "lowercase"){
+                    result = "<b>Lowercase: " + str.toLowerCase() + "</b>";
+                }else if(op == "concatenate"){
+                    result = "<b>Concatenated string: " + str.concat(" Functions ") + "</b>";
+                }else if(op == "trim"){
+                    str = " " + str + " ";
+                    result = "<b>Trimmed string: " + str.trim() + "</b>";
+                }else if(op == "trimStart"){
+                    str = " " + str;
+                    result = "<b>Trimmed start: " + str.trimStart() + "</b>";
+                }else if(op == "trimEnd"){
+                    str = str + " ";
+                    result = "<b>Trimmed end: " + str.trimEnd() + "</b>";
+                }else if(op == "repeat"){
+                    result = "<b>Repeated string: " + str.repeat(3) + "</b>";
+                }else if(op == "replace"){
+                    result = "<b>Replaced string: " + str.replace(" Java ") + "</b>";
+                }else if(op == "replaceAll"){
+                    result = "<b>Replaced all: " + str.replaceAll("Nothing") + "</b>";
+                }else if(op == "split"){
+                    result = "<b>Split string: " + str.split("  ") + "</b>";
+                }
+                document.getElementById("ResultDiv").innerHTML = "<font color ='blue'> <b>" +result + "</b></font>"
+            }
+        </script>
+    </head>
+    <body>
+        <p><h1>Js String Functions</h1></p>
+        <b>Enter a String</b> <input type="text" id="n">
+        <br><br>
+        <b>Select Operations </b><select  id="op">
+            <option value="length"><h3><b>String length</b></h3></option>
+            <option value="charAt"><h3><b>String charAt()</b></h3></option>
+            <option value="slice"><h3><b>String slice()</b></h3></option>
+            <option value="substring"><h3><b>String substring()</b></h3></option>
+            <option value="substr"><h3><b>String substr()</b></h3></option>
+            <option value="uppercase"><h3><b>String toUpperCase()</b></h3></option>
+            <option value="lowercase"><h3><b>String toLowerCase()</b></h3></option>
+            <option value="concatenate"><h3><b>String concat()</b></h3></option>
+            <option value="trim"><h3><b>String trim()</b></h3></option>
+            <option value="trimStart"><h3><b>String trimStart()</b></h3></option>
+            <option value="trimEnd"><h3><b>String trimEnd()</b></h3></option>
+            <option value="repeat"><h3><b>String repeat()</b></h3></option>
+            <option value="replace"><h3><b>String replace()</b></h3></option>
+            <option value="replaceAll"><h3><b>String replaceAll()</b></h3></option>
+            <option value="split"><h3><b>String split()</b></h3></option>
+        </select>
+        <br><br>
+        <button onclick="PerformOperations()">Perform Operation</button>
+        <br><br>
+        <div id = "ResultDiv"></div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+        #login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: black;
+            border-radius: 10px;
+            margin-top: 700px;
+            
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        h2{
+            margin: 0;
+            color: white;
+            font-size: 24px;
+        }
+        #textbox {
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+            padding: 10px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 18px;
+        }
+        #checkbox {
+            margin-bottom: 30px;
+            text-align: left;
+            color: white;
+            color:green;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .button {
+            width: 100%;
+            background: green;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <div id="login-box">
+            <img src="profile.jpg" alt="Avatar" class="avatar">
+            <h2>LOGIN WINDOW</h2>
+            <form>
+                <div id="textbox">
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                <div id="textbox">
+                    <input type="password" placeholder="Your Password" required>
+                </div>
+                <div id="checkbox">
+                    <input type="checkbox" required> 
+                    <label>Agree With <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

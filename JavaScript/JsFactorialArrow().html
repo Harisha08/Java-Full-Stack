@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Js Arrow()</title>
+  </head>
+  <body>
+    Enter the Number <input id="n" type="number" />
+    <br><br>
+    <button onclick="factorial()">Calculate Factorial</button>
+    <div id="ResultDiv"></div>
+    <script>
+      const factorial = () => {
+        let n = parseInt(document.getElementById("n").value);
+        let result = "<table border = '1' width = '50%'>" ;
+            result += "<tr><th>Number</th><th>Factorial</th></tr>";
+        for (let i = 1; i <= n; i++) {
+            let fact = 1;
+            for (let j = 1; j <= i; j++){
+                fact = fact + j;
+            }
+            result += "<tr><td>" + i + "</td><td>" + fact + "</td></tr>";
+        }
+        result += "</table>"
+        document.getElementById("ResultDiv").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js getElementById() & InnerHTML</title>
+    <script>
+        function factorial() {
+            var n = parseInt(document.getElementById("n1").value); 
+            let result = 1; 
+            for(var i = 1; i <= n; i++) {
+                    result = result * i;
+            }
+            
+            document.getElementById("ResultDiv").innerHTML = "<font color='green'><b>Factorial of " + n + " is  " + result + "</b></font>";
+        }
+    </script>
+</head>
+<body>
+    <p><h1>Factorial of a Number</h1></p>
+    <b>Enter Number </b> <input type="text" id="n1">
+    <br><br>
+    <button onclick="factorial()">Factorial</button>
+    <br><br>
+    <div id="ResultDiv"></div>
+</body>
+</html>
