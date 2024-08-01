@@ -1,0 +1,15 @@
+.MyClass1{
+    color : purple;
+}
+.MyClass2{
+    color : red;
+}
+th{
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
